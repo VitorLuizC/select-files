@@ -1,4 +1,4 @@
-**[[libraryNameWithSpacesAndUpperCases]](README.md)**
+**[selectFiles](README.md)**
 
 [Globals](README.md)
 

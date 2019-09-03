@@ -1,5 +1,5 @@
 {
-  "name": "[libraryName]",
+  "name": "select-files",
   "version": "0.0.0",
   "description": "",
   "cdn": "dist/index.umd.js",
@@ -32,19 +32,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/[repositoryOwner]/[repositoryName].git"
+    "url": "git+https://github.com/VitorLuizC/select-files.git"
   },
   "keywords": [
-    "typescript",
-    "boilerplate",
-    "library"
+    "upload"
   ],
   "author": {
-    "name": "[authorFullName]"
+    "url": "https://vitorluizc.github.io/",
+    "name": "Vitor Luiz Cavalcanti",
+    "email": "vitorluizc@outlook.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/[repositoryOwner]/[repositoryName]/issues"
+    "url": "https://github.com/VitorLuizC/select-files/issues"
   },
-  "homepage": "https://github.com/[repositoryOwner]/[repositoryName]#readme"
+  "homepage": "https://github.com/VitorLuizC/select-files#readme"
 }

@@ -1,6 +1,6 @@
 /*!
- * [libraryName] v0.0.0
- * (c) [authorFullName]
+ * select-files v0.0.0
+ * (c) Vitor Luiz Cavalcanti
  * Released under the MIT License.
  */
 'use strict';
