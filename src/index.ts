@@ -1,24 +1,40 @@
-/**
- * A Branded Type for values parseable to number.
- */
-export type NumberParseable = (number | string | boolean) & {
-  readonly isNumberParseble: unique symbol;
+type InputFile = HTMLInputElement & {
+  capture: boolean | string;
 };
 
-/**
- * Check if value is parseable to number.
- * @example ```ts
- * isNumberParseable('AAAA');
- * //=> false
- *
- * isNumberParseable('100');
- * //=> true
- *
- * if (!isNumberParseable(value))
- *   throw new Error('Value can\'t be parseable to `Number`.')
- * return Number(value);
- * ```
- * @param value - An `unknown` value to be checked.
- */
-export const isNumberParseable = (value: unknown): value is NumberParseable =>
-  !Number.isNaN(Number(value));
+export type Options = {
+  accept?: string;
+  capture?: string | boolean;
+  multiple?: boolean;
+};
+
+const createInputFile = ({
+  accept = '',
+  capture = false,
+  multiple = false
+}: Options = {}): InputFile => {
+  const input = document.createElement('input') as InputFile;
+
+  input.type = 'file';
+  input.accept = accept;
+  input.capture = capture;
+  input.multiple = multiple;
+
+  return input;
+};
+
+const runOnIddle = (fn: () => void) => setTimeout(() => fn(), 0);
+
+const selectFiles = (options: Options) =>
+  new Promise<null | FileList>(resolve => {
+    const input = createInputFile(options);
+
+    input.addEventListener('change', () => resolve(input.files || null));
+
+    runOnIddle(() => {
+      const event = new MouseEvent('click');
+      input.dispatchEvent(event);
+    });
+  });
+
+export default selectFiles;
