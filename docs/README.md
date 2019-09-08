@@ -6,36 +6,87 @@
 
 ### Type aliases
 
-* [NumberParseable](README.md#numberparseable)
+* [InputFile](README.md#inputfile)
+* [Options](README.md#options)
 
 ### Functions
 
-* [isNumberParseable](README.md#const-isnumberparseable)
+* [createInputFile](README.md#const-createinputfile)
+* [runOnIddle](README.md#const-runoniddle)
+* [selectFiles](README.md#const-selectfiles)
 
 ## Type aliases
 
-###  NumberParseable
+###  InputFile
 
-Ƭ **NumberParseable**: *string | number | false | true & object*
+Ƭ **InputFile**: *HTMLInputElement & object*
 
-*Defined in [index.ts:4](https://github.com/VitorLuizC/typescript-library-boilerplate/blob/696db7f/src/index.ts#L4)*
+*Defined in [index.ts:1](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L1)*
 
-A Branded Type for values parseable to number.
+___
+
+###  Options
+
+Ƭ **Options**: *object*
+
+*Defined in [index.ts:5](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L5)*
+
+#### Type declaration:
+
+* **accept**? : *undefined | string*
+
+* **capture**? : *string | boolean*
+
+* **multiple**? : *undefined | false | true*
 
 ## Functions
 
-### `Const` isNumberParseable
+### `Const` createInputFile
 
-▸ **isNumberParseable**(`value`: unknown): *boolean*
+▸ **createInputFile**(`__namedParameters`: object): *[InputFile](README.md#inputfile)*
 
-*Defined in [index.ts:23](https://github.com/VitorLuizC/typescript-library-boilerplate/blob/696db7f/src/index.ts#L23)*
+*Defined in [index.ts:11](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L11)*
 
-Check if value is parseable to number.
+**Parameters:**
+
+▪`Default value`  **__namedParameters**: *object*=  {}
+
+Name | Type | Default |
+------ | ------ | ------ |
+`accept` | string | "" |
+`capture` | string \| false \| true | false |
+`multiple` | boolean | false |
+
+**Returns:** *[InputFile](README.md#inputfile)*
+
+___
+
+### `Const` runOnIddle
+
+▸ **runOnIddle**(`fn`: function): *Timeout*
+
+*Defined in [index.ts:26](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L26)*
+
+**Parameters:**
+
+▪ **fn**: *function*
+
+▸ (): *void*
+
+**Returns:** *Timeout*
+
+___
+
+### `Const` selectFiles
+
+▸ **selectFiles**(`options`: [Options](README.md#options)): *Promise‹null | FileList›*
+
+*Defined in [index.ts:28](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L28)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | unknown |
+`options` | [Options](README.md#options) |
 
-**Returns:** *boolean*
+**Returns:** *Promise‹null | FileList›*

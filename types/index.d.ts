@@ -1,22 +1,39 @@
 /**
- * A Branded Type for values parseable to number.
+ * Type of options for file input element (`<input type="file" />`) virtually
+ * created to select files.
  */
-export declare type NumberParseable = (number | string | boolean) & {
-    readonly isNumberParseble: unique symbol;
+export declare type Options = {
+    /**
+     * Defines accepted file types. It's a comma-separated list of file
+     * extensions, mime-types or unique file type specifiers.
+     *
+     * https://developer.mozilla.org/docs/Web/HTML/Element/input/file#Unique_file_type_specifiers
+     *
+     * @example ```js
+     * "image/*,video/*,.pdf,.doc,.docx,.xls"
+     * ```
+     */
+    accept?: string;
+    /**
+     * Combined with `accept` property it specifies which camera to use for
+     * capture of image or video. It was previously a Boolean value.
+     */
+    capture?: string | boolean;
+    /**
+     * Allow multiple files selection.
+     */
+    multiple?: boolean;
 };
 /**
- * Check if value is parseable to number.
- * @example ```ts
- * isNumberParseable('AAAA');
- * //=> false
+ * Virtually creates a file input element (`<input type="file" />`), triggers it
+ * and returns selected files.
  *
- * isNumberParseable('100');
- * //=> true
+ * @example
+ * selectFiles({ accept: 'image/*', multiple: true }).then(files => {
+ *   // ...
+ * });
  *
- * if (!isNumberParseable(value))
- *   throw new Error('Value can\'t be parseable to `Number`.')
- * return Number(value);
- * ```
- * @param value - An `unknown` value to be checked.
+ * @param options
  */
-export declare const isNumberParseable: (value: unknown) => value is NumberParseable;
+declare const selectFiles: (options: Options) => Promise<FileList | null>;
+export default selectFiles;
