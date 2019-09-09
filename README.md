@@ -5,6 +5,16 @@
 [![Library minified size](https://badgen.net/bundlephobia/min/select-files)](https://bundlephobia.com/result?p=select-files)
 [![Library minified + gzipped size](https://badgen.net/bundlephobia/minzip/select-files)](https://bundlephobia.com/result?p=select-files)
 
+Virtually creates a file input element (`<input type="file" />`), triggers it and returns selected files.
+
+```js
+import selectFiles from 'select-files';
+
+selectFiles({ accept: 'image/*', capture: 'camera' }).then(files => {
+  // ...
+});
+```
+
 ## Installation
 
 This library is published in the NPM registry and can be installed using any compatible package manager.
@@ -28,8 +38,10 @@ This module has an UMD bundle available through JSDelivr and Unpkg CDNs.
 <script src="https://cdn.jsdelivr.net/npm/select-files"></script>
 
 <script>
-  // UMD module is exposed through the "selectFiles" global variable.
-  console.log(selectFiles);
+  // UMD module is exposed through the "selectFiles" global function.
+  selectFiles({ multiple: true }).then(files => {
+    console.log(files);
+  });
 </script>
 ```
 
