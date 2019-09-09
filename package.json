@@ -1,7 +1,7 @@
 {
   "name": "select-files",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Virtually creates a file input element (<input type=\"file\" />), triggers it and returns selected files.",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
@@ -35,7 +35,19 @@
     "url": "git+https://github.com/VitorLuizC/select-files.git"
   },
   "keywords": [
-    "upload"
+    "select-files",
+    "select-file",
+    "upload-files",
+    "upload-file",
+    "select",
+    "upload",
+    "input-file",
+    "file-input",
+    "file",
+    "filelist",
+    "dom",
+    "typescript",
+    "javascript"
   ],
   "author": {
     "url": "https://vitorluizc.github.io/",

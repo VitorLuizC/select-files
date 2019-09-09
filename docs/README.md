@@ -12,7 +12,6 @@
 ### Functions
 
 * [createInputFile](README.md#const-createinputfile)
-* [runOnIddle](README.md#const-runoniddle)
 * [selectFiles](README.md#const-selectfiles)
 
 ## Type aliases
@@ -21,7 +20,9 @@
 
 Ƭ **InputFile**: *HTMLInputElement & object*
 
-*Defined in [index.ts:1](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L1)*
+*Defined in [index.ts:4](https://github.com/VitorLuizC/select-files/blob/e6d7c36/src/index.ts#L4)*
+
+Custom type for file input element (`<input type="file" />`).
 
 ___
 
@@ -29,7 +30,10 @@ ___
 
 Ƭ **Options**: *object*
 
-*Defined in [index.ts:5](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L5)*
+*Defined in [index.ts:12](https://github.com/VitorLuizC/select-files/blob/e6d7c36/src/index.ts#L12)*
+
+Type of options for file input element (`<input type="file" />`) virtually
+created to select files.
 
 #### Type declaration:
 
@@ -45,7 +49,9 @@ ___
 
 ▸ **createInputFile**(`__namedParameters`: object): *[InputFile](README.md#inputfile)*
 
-*Defined in [index.ts:11](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L11)*
+*Defined in [index.ts:41](https://github.com/VitorLuizC/select-files/blob/e6d7c36/src/index.ts#L41)*
+
+Creates a virtual file input element (`<input type="file" />`) with options.
 
 **Parameters:**
 
@@ -61,32 +67,19 @@ Name | Type | Default |
 
 ___
 
-### `Const` runOnIddle
-
-▸ **runOnIddle**(`fn`: function): *Timeout*
-
-*Defined in [index.ts:26](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L26)*
-
-**Parameters:**
-
-▪ **fn**: *function*
-
-▸ (): *void*
-
-**Returns:** *Timeout*
-
-___
-
 ### `Const` selectFiles
 
-▸ **selectFiles**(`options`: [Options](README.md#options)): *Promise‹null | FileList›*
+▸ **selectFiles**(`options?`: [Options](README.md#options)): *Promise‹null | FileList›*
 
-*Defined in [index.ts:28](https://github.com/VitorLuizC/select-files/blob/66fc488/src/index.ts#L28)*
+*Defined in [index.ts:67](https://github.com/VitorLuizC/select-files/blob/e6d7c36/src/index.ts#L67)*
+
+Virtually creates a file input element (`<input type="file" />`), triggers it
+and returns selected files.
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`options` | [Options](README.md#options) |
+Name | Type | Description |
+------ | ------ | ------ |
+`options?` | [Options](README.md#options) |   |
 
 **Returns:** *Promise‹null | FileList›*
