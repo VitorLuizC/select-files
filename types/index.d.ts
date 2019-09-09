@@ -35,5 +35,5 @@ export declare type Options = {
  *
  * @param options
  */
-declare const selectFiles: (options: Options) => Promise<FileList | null>;
+declare const selectFiles: (options?: Options | undefined) => Promise<FileList | null>;
 export default selectFiles;

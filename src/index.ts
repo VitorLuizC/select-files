@@ -64,7 +64,7 @@ const createInputFile = ({
  *
  * @param options
  */
-const selectFiles = (options: Options) =>
+const selectFiles = (options?: Options) =>
   new Promise<null | FileList>(resolve => {
     const input = createInputFile(options);
 
