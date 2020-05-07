@@ -41,7 +41,7 @@ export type Options = {
 const createInputFile = ({
   accept = '',
   capture = false,
-  multiple = false
+  multiple = false,
 }: Options = {}): InputFile => {
   const input = document.createElement('input') as InputFile;
 
@@ -65,7 +65,7 @@ const createInputFile = ({
  * @param options
  */
 const selectFiles = (options?: Options) =>
-  new Promise<null | FileList>(resolve => {
+  new Promise<null | FileList>((resolve) => {
     const input = createInputFile(options);
 
     input.addEventListener('change', () => resolve(input.files || null));

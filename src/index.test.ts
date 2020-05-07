@@ -3,24 +3,24 @@ import selectFiles from './';
 const MouseEventMock = jest.fn<unknown, any>();
 
 Object.defineProperty(global, 'MouseEvent', {
-  value: MouseEventMock
+  value: MouseEventMock,
 });
 
 const HTMLInputElementMock = {
   addEventListener: jest.fn<void, [string, () => void]>(),
-  dispatchEvent: jest.fn<void, [Event]>()
+  dispatchEvent: jest.fn<void, [Event]>(),
 };
 
 Object.defineProperty(global, 'HTMLInputElement', {
-  value: HTMLInputElementMock
+  value: HTMLInputElementMock,
 });
 
 const documentMock = {
-  createElement: jest.fn<object, [string]>()
+  createElement: jest.fn<object, [string]>(),
 };
 
 Object.defineProperty(global, 'document', {
-  value: documentMock
+  value: documentMock,
 });
 
 describe('unit | selectFiles', () => {
@@ -56,7 +56,7 @@ describe('unit | selectFiles', () => {
 
       expect(HTMLInputElementMock.addEventListener).toHaveBeenCalledWith(
         'change',
-        expect.any(Function)
+        expect.any(Function),
       );
     });
 
@@ -75,13 +75,13 @@ describe('unit | selectFiles', () => {
 
       expect(MouseEventMock).toHaveBeenCalledWith('click');
       expect(HTMLInputElementMock.dispatchEvent).toHaveBeenCalledWith(
-        expect.any(MouseEventMock)
+        expect.any(MouseEventMock),
       );
     });
 
     it('resolves file input element files', async () => {
       const input = Object.assign({}, HTMLInputElementMock, {
-        files: ['Avatar.png']
+        files: ['Avatar.png'],
       });
 
       documentMock.createElement.mockReturnValueOnce(input);
@@ -101,7 +101,7 @@ describe('unit | selectFiles', () => {
   describe('when change file input element attributes', () => {
     it('define file input element attributes', async () => {
       const input = Object.assign({}, HTMLInputElementMock, {
-        files: ['Avatar.png']
+        files: ['Avatar.png'],
       });
 
       documentMock.createElement.mockReturnValueOnce(input);
@@ -117,15 +117,15 @@ describe('unit | selectFiles', () => {
       await selectFiles({
         accept: 'image/*',
         capture: 'camera',
-        multiple: true
+        multiple: true,
       });
 
       expect(input).toEqual(
         expect.objectContaining({
           accept: 'image/*',
           capture: 'camera',
-          multiple: true
-        })
+          multiple: true,
+        }),
       );
     });
   });

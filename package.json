@@ -24,9 +24,9 @@
   "scripts": {
     "doc": "typedoc src/index.ts",
     "test": "yarn test:lint && yarn test:unit",
-    "test:lint": "prettier **/*.{ts,tsx,js,jsx,json} --check",
+    "test:lint": "prettier **/*.{ts,js,json} --check",
     "test:unit": "jest",
-    "lint": "prettier **/*.{ts,tsx,js,jsx,json} --write",
+    "lint": "prettier **/*.{ts,js,json} --write",
     "build": "bili",
     "prepublishOnly": "yarn doc && yarn build && yarn test"
   },

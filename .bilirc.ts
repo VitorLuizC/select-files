@@ -1,4 +1,4 @@
-import { Config as Configuration } from 'bili';
+import type { Config as Configuration } from 'bili';
 
 const configuration: Configuration = {
   banner: true,
@@ -6,18 +6,18 @@ const configuration: Configuration = {
   output: {
     format: ['es', 'cjs', 'umd', 'umd-min'],
     moduleName: 'selectFiles',
-    sourceMap: true
+    sourceMap: true,
   },
   babel: {
-    minimal: true
+    minimal: true,
   },
   plugins: {
     typescript2: {
       clean: true,
       tsconfig: 'tsconfig.bundle.json',
-      useTsconfigDeclarationDir: true
-    }
-  }
+      useTsconfigDeclarationDir: true,
+    },
+  },
 };
 
 export default configuration;
