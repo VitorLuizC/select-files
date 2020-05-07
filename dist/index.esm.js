@@ -1,8 +1,3 @@
-/*!
- * select-files v1.0.1
- * (c) Vitor Luiz Cavalcanti <vitorluizc@outlook.com> (https://vitorluizc.github.io)
- * Released under the MIT License.
- */
 /**
  * Creates a virtual file input element (`<input type="file" />`) with options.
  * @param options

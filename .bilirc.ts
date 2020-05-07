@@ -1,7 +1,7 @@
 import type { Config as Configuration } from 'bili';
 
 const configuration: Configuration = {
-  banner: true,
+  banner: false,
   input: 'src/index.ts',
   output: {
     format: ['es', 'cjs', 'umd', 'umd-min'],
