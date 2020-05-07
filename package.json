@@ -1,6 +1,6 @@
 {
   "name": "select-files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Virtually creates a file input element (<input type=\"file\" />), triggers it and returns selected files.",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",

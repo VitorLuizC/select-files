@@ -1,5 +1,5 @@
 /*!
- * select-files v1.0.0
+ * select-files v1.0.1
  * (c) Vitor Luiz Cavalcanti <vitorluizc@outlook.com> (https://vitorluizc.github.io)
  * Released under the MIT License.
  */
@@ -7,7 +7,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = global || self, global.selectFiles = factory());
-}(this, function () { 'use strict';
+}(this, (function () { 'use strict';
 
   /**
    * Creates a virtual file input element (`<input type="file" />`) with options.
@@ -50,5 +50,5 @@
 
   return selectFiles;
 
-}));
+})));
 //# sourceMappingURL=index.umd.js.map

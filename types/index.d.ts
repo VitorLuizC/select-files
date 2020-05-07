@@ -37,3 +37,4 @@ export declare type Options = {
  */
 declare const selectFiles: (options?: Options | undefined) => Promise<FileList | null>;
 export default selectFiles;
+//# sourceMappingURL=index.d.ts.map
