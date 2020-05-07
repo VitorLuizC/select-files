@@ -5,6 +5,7 @@
     "newLine": "LF",
     "noEmitOnError": true,
     "outDir": "dist/",
+    "sourceMap": false,
 
     // Configuration for type declarations.
     "declaration": true,
